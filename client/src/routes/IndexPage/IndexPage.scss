@@ -1,0 +1,51 @@
+.index-page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins";
+
+  .all-card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 500px;
+    height: auto;
+    flex-wrap: wrap;
+
+    a {
+      text-decoration: none;
+    }
+
+    a > div {
+      width: 200px;
+      height: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      padding: 15px;
+      background-color: white;
+      color: #10b981;
+      border: 2px solid #10b981;
+
+      font-size: 10px;
+      gap: 10px;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.05);
+        transition: 0.2s ease-in;
+        background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+        color: rgba(255, 255, 255, 0.785);
+        border: none;
+      }
+      .icon {
+        font-size: 50px;
+      }
+    }
+  }
+}

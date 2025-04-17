@@ -1,0 +1,130 @@
+.container {
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .main-heading {
+    font-size: 2rem;
+    color: #2d3748;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #48bb78;
+    padding-bottom: 0.5rem;
+  }
+
+  .upload-section {
+    margin-bottom: 2rem;
+    width: 900px;
+    background: #f7fafc;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .file-input {
+      width: 100%;
+      padding: 0.75rem;
+      border: 2px dotted #10b9818f;
+      border-radius: 6px;
+      transition: border-color 0.02s ease;
+      margin: 0px !important;
+      cursor: pointer;
+      &:hover {
+        transition: 0.02s ease-in;
+        border: 2px solid #10b9818f;
+
+        &::-webkit-file-upload-button {
+          color: white;
+          background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+          border: none;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .file-input::-webkit-file-upload-button {
+      background: transparent;
+      color: #059669;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 14px;
+      transition: background 0.3s ease;
+    }
+
+    .evaluate-btn {
+      background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      margin: 1rem 0;
+      &:hover {
+        background: linear-gradient(90deg, #0a7752 0%, #035239 100%);
+        color: #ffffff7b;
+      }
+    }
+  }
+
+  .result-section {
+    width: 100%;
+    .export-btn {
+      background: #022333;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      margin: 1rem 0;
+    }
+    .result-container {
+      display: flex;
+      width: 100%;
+      height: 500px;
+      overflow: auto;
+      .results-table {
+        width: 100vw;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+
+        th,
+        td {
+          padding: 0.75rem;
+          border: 1px solid #e2e8f0;
+        }
+        th {
+          position: sticky;
+          left: 0px;
+          top: 0px;
+          background-color: rgb(0, 179, 255);
+        }
+        .correct-answer {
+          background: #e6ffe6;
+          color: #228b22;
+        }
+
+        .detected-answer.correct {
+          color: #228b22;
+        }
+
+        .detected-answer.incorrect {
+          color: #dc2626;
+        }
+
+        .detected-answer.skipped {
+          color: #2563eb;
+        }
+
+        .sticky-column {
+          position: sticky;
+          left: 0;
+          background: white;
+          z-index: 2;
+        }
+      }
+    }
+  }
+}
